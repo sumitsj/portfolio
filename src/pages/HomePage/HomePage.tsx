@@ -6,7 +6,7 @@ import style from './HomePage.module.scss'
 const HomePage: React.FC = () => {
     return (
         <div className={style.component}>
-            <h1>This is Home Page</h1>
+            <h1>This is Sumit&apos;s Portfolio</h1>
         </div>
     )
 }
