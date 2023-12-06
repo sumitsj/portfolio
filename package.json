@@ -47,7 +47,7 @@
     "@types/react-dom": "^18.2.14",
     "typescript": "^5.2.2"
   },
-  "homepage": "https://sumitsj.github.io/portfolio",
+  "homepage": "https://sumitsj.github.io/",
   "postcss": {
     "plugins": {
       "autoprefixer": {}
