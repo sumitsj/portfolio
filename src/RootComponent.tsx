@@ -7,7 +7,7 @@ import './styles/main.scss'
 
 const RootComponent: React.FC = () => {
     return (
-        <Router basename="/portfolio">
+        <Router basename="/">
             <Routes>
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path={ROUTES.HOMEPAGE_ROUTE} element={<HomePage />} />
