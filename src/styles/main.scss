@@ -32,6 +32,10 @@ body {
   height: 100%;
   padding: 2rem 4rem;
 
+  @include breakpoint('<phone') {
+    padding: 1rem;
+  }
+
   h1 {
     font-family: 'Bebas Neue', -apple-system;
     font-size: 7.5rem;
@@ -57,7 +61,7 @@ body {
   justify-content: center;
   transition: all .4s;
 
-  @media only screen and (max-width: $phone-size) {
+  @include breakpoint('<phone') {
     top: calc(100vh - 5rem);
   }
 
