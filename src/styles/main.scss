@@ -54,6 +54,7 @@ h2 {
 .hero-section {
   width: 80%;
   max-width: 780px;
+  margin: 1rem;
 }
 
 .highlight {
@@ -64,6 +65,11 @@ h2 {
   text-decoration-thickness: 0.5rem;
   text-underline-offset: 0.75rem;
   cursor: pointer;
+}
+
+.tile {
+  padding: 0.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .nav {
