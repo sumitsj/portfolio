@@ -1,0 +1,55 @@
+import React, { MouseEvent, ReactNode } from "react";
+import { createRoot } from "react-dom/client";
+import { useNavigate } from "react-router-dom";
+import { BubblyBubbles } from "./BubblyBubbles";
+
+export type BubblyLinkProps = {
+  to: string;
+  children: ReactNode;
+  colorStart?: string;
+  colorEnd?: string;
+  duration?: number;
+};
+
+export const BubblyLink: React.FC<BubblyLinkProps> = ({
+  to,
+  children,
+  colorStart = "#8f44fd",
+  colorEnd = "#ffffff",
+  duration = 1250,
+}) => {
+  const navigate = useNavigate();
+
+  const handleClick = (e: MouseEvent<HTMLButtonElement> | undefined) => {
+    e?.preventDefault();
+    const container = createRoot(
+      document.getElementById("react-bubbly-transitions__container")!
+    );
+
+    // show the waves
+    container.render(
+      <BubblyBubbles
+        colorStart={colorStart}
+        colorEnd={colorEnd}
+        duration={duration}
+      />
+    );
+
+    // do the route change
+    setTimeout(() => navigate(to), duration / 2); // half total animation
+
+    // hide the waves
+    setTimeout(() => container.unmount(), duration); // total animation
+  };
+
+  return (
+    <button
+      type="button"
+      className={`react-bubbly-transitions__bubbly-link ${window.location.pathname === to ? "active" : ""
+        }`}
+      onClick={handleClick}
+    >
+      {children}
+    </button>
+  );
+};

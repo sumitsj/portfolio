@@ -7998,15 +7998,6 @@ react-app-polyfill@^3.0.0:
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
 
-react-bubbly-transitions@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-bubbly-transitions/-/react-bubbly-transitions-1.0.1.tgz#a35eec5b4c02d4cddb3fdceb41f3ab37fe85a3e8"
-  integrity sha512-SGA81Fbyo28/ab4JQEO1d0gSTBl+qX1qF0NC8NUgA2fHNqOfQIu9pM0wNPb0pNl0sCe4hcec2ajU/KmGly2b6w==
-  dependencies:
-    react "^18.2.0"
-    react-dom "^18.2.0"
-    react-router-dom "^6.4.2"
-
 react-dev-utils@^12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-12.0.1.tgz#ba92edb4a1f379bd46ccd6bcd4e7bc398df33e73"
@@ -8082,7 +8073,7 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-router-dom@^6.17.0, react-router-dom@^6.4.2:
+react-router-dom@^6.17.0:
   version "6.20.1"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.20.1.tgz#e34f8075b9304221420de3609e072bb349824984"
   integrity sha512-npzfPWcxfQN35psS7rJgi/EW0Gx6EsNjfdJSAk73U/HqMEJZ2k/8puxfwHFgDQhBGmS3+sjnGbMdMSV45axPQw==

@@ -1,6 +1,6 @@
 import React from 'react'
 import { MemoryRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
-import { BubblyContainer } from 'react-bubbly-transitions'
+import { BubblyContainer } from './lib/BubblyTransition'
 import AnimatedCursor from 'react-animated-cursor'
 import { ROUTES } from './resources/routes-constants'
 import { About, Contact, Home, Nav } from './components'

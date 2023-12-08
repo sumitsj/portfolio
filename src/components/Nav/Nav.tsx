@@ -1,5 +1,5 @@
 import React from 'react';
-import { BubblyLink } from 'react-bubbly-transitions'
+import { BubblyLink } from '../../lib/BubblyTransition'
 import { useLocation } from 'react-router-dom';
 
 
@@ -8,7 +8,6 @@ export const Nav: React.FC = () => {
 
 
     const getClassName = (pageName: string): string => {
-        console.log(location.pathname)
 
         if (pageName == location.pathname) {
             return "nav-item active"
