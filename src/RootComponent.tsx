@@ -1,16 +1,29 @@
 import React from 'react'
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
-import HomePage from './pages/HomePage/HomePage'
-import NotFoundPage from './pages/NotFoundPage'
+import { MemoryRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
+import { BubblyContainer } from 'react-bubbly-transitions'
 import { ROUTES } from './resources/routes-constants'
+import { About, Contact, Home, Nav } from './components'
 import './styles/main.scss'
 
 const RootComponent: React.FC = () => {
     return (
-        <Router basename="/">
+        <Router>
+            <BubblyContainer />
             <Routes>
-                <Route path="*" element={<NotFoundPage />} />
-                <Route path={ROUTES.HOMEPAGE_ROUTE} element={<HomePage />} />
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <Nav />
+                            <Outlet />
+                        </>
+                    }
+                >
+                    <Route index element={<Home />} />
+                    <Route path={ROUTES.ABOUT_ROUTE} element={<About />} />
+                    <Route path={ROUTES.CONTACT_ROUTE} element={<Contact />} />
+                    <Route path="*" element={<>Not Found</>} />
+                </Route>
             </Routes>
         </Router>
     )

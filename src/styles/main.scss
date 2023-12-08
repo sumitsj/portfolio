@@ -1,12 +1,21 @@
 @import './_variables';
 @import './_mixins';
 
-html, body {
+html,
+body {
   height: 100%;
   overflow-x: hidden;
 }
 
-h1,h2,h3,h4,h5,h6,p,span,a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
   margin: 0;
 }
 
@@ -19,4 +28,21 @@ body {
   color: $main-text-color;
   background-color: $main-background-color;
   font-size: $main-text-size;
+}
+
+#root {
+  height: 100vh;
+}
+
+.page {
+  height: 100%;
+  padding: 2rem 4rem;
+}
+
+.nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
