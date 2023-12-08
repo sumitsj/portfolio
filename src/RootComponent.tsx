@@ -15,7 +15,21 @@ const RootComponent: React.FC = () => {
                     path="/"
                     element={
                         <>
-                            <AnimatedCursor />
+                            <AnimatedCursor
+                                innerSize={8}
+                                outerSize={35}
+                                innerScale={1}
+                                outerScale={2}
+                                outerAlpha={0}
+                                // hasBlendMode={true}
+                                innerStyle={{
+                                    backgroundColor: '#cd7650'
+                                }}
+                                outerStyle={{
+                                    border: '2px solid #cd7650',
+                                    backgroundColor: 'rgba(205, 118, 80, 0.2)'
+                                }}
+                            />
                             <Nav />
                             <Outlet />
                         </>
