@@ -55,6 +55,11 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
+  transition: all .4s;
+
+  @media only screen and (max-width: $phone-size) {
+    top: calc(100vh - 5rem);
+  }
 
   .nav-container {
     display: inline-block;
@@ -62,6 +67,10 @@ body {
     padding: 6px;
     border-radius: 12px;
     transition: all .4s;
+
+    &:hover {
+      transform: scale(110%);
+    }
   }
 
   .nav-item {
@@ -73,6 +82,10 @@ body {
       background-color: #222;
       color: #fff;
       border-radius: 0.50rem;
+    }
+
+    &:hover:not(.active) {
+      color: $highligher-color;
     }
   }
 }

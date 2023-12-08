@@ -19,9 +19,9 @@ export const Nav: React.FC = () => {
     return (
         <div className='nav'>
             <div className='nav-container'>
-                <BubblyLink to="/"><div className={getClassName("/")}>Home</div></BubblyLink>
-                <BubblyLink to="/about"><div className={getClassName("/about")}>About</div></BubblyLink>
-                <BubblyLink to="/contact"><div className={getClassName("/contact")}>Contact</div></BubblyLink>
+                <BubblyLink colorStart="#cd7650" colorEnd="#222" to="/"><div className={getClassName("/")}>Home</div></BubblyLink>
+                <BubblyLink colorStart="#cd7650" colorEnd="#222" to="/about"><div className={getClassName("/about")}>About</div></BubblyLink>
+                <BubblyLink colorStart="#cd7650" colorEnd="#222" to="/contact"><div className={getClassName("/contact")}>Contact</div></BubblyLink>
             </div>
         </div>
     )
