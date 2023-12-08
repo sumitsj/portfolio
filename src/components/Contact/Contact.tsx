@@ -3,7 +3,7 @@ import React from 'react'
 export const Contact: React.FC = () => {
     return (
         <div className='page'>
-            This is About
+            <h1>This is <span className='highlight'>Contact</span></h1>
         </div>
     )
 }
