@@ -27,44 +27,63 @@ body {
 
 .page {
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100%;
-  padding: 2rem 4rem;
+  padding: 4rem;
 
   @include breakpoint('<phone') {
-    padding: 1rem;
+    padding: 6rem 1rem 1rem;
+    justify-content: center;
   }
 }
 
 h1 {
   font-family: 'Bebas Neue', -apple-system;
-  font-size: 4.5rem;
-  font-weight: 400;
+  font-size: clamp(2rem, 10vw, 6rem);
+  font-weight: 900;
   line-height: 1.5;
+  transition: all 0.4s;
+
+  a {
+    letter-spacing: 5px;
+  }
 }
 
 h2 {
   font-family: 'Bebas Neue', -apple-system;
-  font-size: 3rem;
+  font-size: clamp(1rem, 6vw, 4rem);
   font-weight: 400;
   line-height: 1.5;
 }
 
 .hero-section {
-  width: 80%;
-  max-width: 780px;
   margin: 1rem;
 }
 
+.hero-section-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Sumit.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .highlight {
-  font-size: 4.5rem;
-  font-weight: 600;
   color: $highligher-color;
   text-decoration: underline;
   text-decoration-thickness: 0.5rem;
   text-underline-offset: 0.75rem;
   cursor: pointer;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0px #000,
+    2px -2px 0px #000,
+    -2px 2px 0px #000,
+    -2px -2px 0px #000,
+    2px 0px 0px #000,
+    0px 2px 0px #000,
+    -2px 0px 0px #000,
+    0px -2px 0px #000;
 }
 
 .tile {
@@ -88,6 +107,7 @@ h2 {
   .nav-container {
     display: inline-block;
     background: rgba(34, 34, 34, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 6px;
     border-radius: 12px;
     transition: all .4s;
@@ -100,11 +120,11 @@ h2 {
   .nav-item {
     padding: 0 1rem;
     line-height: 3rem;
-    color: #ccc;
+    color: #fff;
 
     &.active {
-      background-color: #222;
-      color: #fff;
+      background-color: rgba(99, 99, 99, 0.2);
+      color: $main-text-color;
       border-radius: 0.50rem;
     }
 
