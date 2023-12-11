@@ -8,7 +8,7 @@ export const Firefly: React.FC = () => {
 
     return <>
         {
-            Array.apply(0, Array(10)).map(function (x, i) {
+            Array.apply(0, Array(count)).map(function (x, i) {
                 return getHtml(i);
             })
         }
