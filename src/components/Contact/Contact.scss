@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.contact-page {
+    display: flex;
+    align-items: flex-start;
+    padding: 6rem 2rem 0;
+
+    >div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        gap: 1rem;
+        width: 100%;
+
+        @include breakpoint('<phone') {
+            grid-template-columns: repeat(auto-fit, 100%);
+        }
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    min-width: 30%;
+
+    >* {
+        color: $highligher-color;
+        line-height: 2rem;
+    }
+}
+
+.contact-label {
+    font-size: 2rem;
+    line-height: 4rem;
+    padding: 0 1rem;
+}
+
+.contact-link {
+    padding: 0 1rem;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
