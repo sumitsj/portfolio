@@ -3,7 +3,7 @@ import { MemoryRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
 import { BubblyContainer } from './lib/BubblyTransition'
 import AnimatedCursor from 'react-animated-cursor'
 import { ROUTES } from './resources/routes-constants'
-import { About, Contact, Home, Nav, StickyBar } from './components'
+import { About, Contact, Firefly, Home, Nav, StickyBar } from './components'
 import './styles/main.scss'
 
 const RootComponent: React.FC = () => {
@@ -33,6 +33,7 @@ const RootComponent: React.FC = () => {
                             <Nav />
                             <Outlet />
                             <StickyBar />
+                            <Firefly />
                         </>
                     }
                 >
