@@ -5,3 +5,4 @@ export * from "./Home/Home";
 export * from "./StickyBar/StickyBar";
 export * from "./Firefly/Firefly";
 export * from "./Skills/Skills";
+export * from "./Timeline/Timeline";

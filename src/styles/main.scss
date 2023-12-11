@@ -56,9 +56,73 @@ h2 {
 }
 
 .section-title {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(2rem, 6vw, 2.5rem);
   font-weight: 400;
   line-height: 1.5;
+  margin: 1rem 0;
+}
+
+$separator-size: 5px;
+$separator-border-style: solid;
+$separator-border-color: $highligher-color;
+$separator-space-top: 2rem;
+$separator-space-bottom: 3rem;
+
+.separator {
+  margin-top: $separator-space-top;
+  margin-bottom: $separator-space-bottom;
+  border: 0;
+}
+
+@mixin dot {
+  $dot-size: 7px;
+  content: "";
+  background-color: $separator-border-color;
+  display: block;
+  height: $dot-size;
+  width: $dot-size;
+  border-radius: 50%;
+}
+
+.separator--dots {
+  overflow: visible;
+  border: 0;
+  @include dot();
+  position: relative;
+
+  &:before {
+    @include dot();
+    position: absolute;
+    left: -32px;
+    animation: dot-move-left 1s ease-out forwards;
+  }
+
+  &:after {
+    @include dot();
+    position: absolute;
+    left: 32px;
+    animation: dot-move-right 1s ease-out forwards;
+  }
+}
+
+@keyframes dot-move-right {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 32px;
+  }
+}
+
+@keyframes dot-move-left {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -32px;
+  }
 }
 
 .hero-section {
@@ -105,6 +169,7 @@ h2 {
   align-items: center;
   justify-content: center;
   transition: all .4s;
+  z-index: 1000;
 
   @include breakpoint('<phone') {
     top: calc(100vh - 5rem);
