@@ -18,6 +18,35 @@
     }
 }
 
+.download-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/-1;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 10vh;
+
+    button {
+        padding: 1rem;
+        border: none;
+        font-size: 1rem;
+        color: #fff;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        transition: 0.5s;
+        transition-property: box-shadow;
+        background: $highligher-color-link;
+        box-shadow: 0 0 15px $highligher-color-link;
+
+        &:hover {
+            box-shadow: 0 0 5px $highligher-color-link,
+                0 0 25px $highligher-color-link,
+                0 0 50px $highligher-color-link;
+        }
+    }
+}
+
 .contact-hero-section {
     display: flex;
     justify-content: center;
@@ -26,17 +55,44 @@
     font-size: clamp(2rem, 10vw, 4rem);
     font-weight: 900;
     height: 20vh;
+    animation: floating 1s ease-in-out infinite;
+
+    @include breakpoint('<phone') {
+        height: 100px;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     padding: 1rem;
     min-width: 30%;
     background: rgba(34, 34, 34, .8);
     border: 1px solid hsla(0, 0%, 100%, .2);
     border-radius: 12px;
+    transition: all 0.4s ease;
+
+    &:hover {
+        // background-color: rgba($highligher-color-link, 0.3);
+        box-shadow: 0 0 10px $highligher-color-link;
+        animation: none;
+    }
 
     >* {
         color: $highligher-color;

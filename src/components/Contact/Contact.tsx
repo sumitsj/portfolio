@@ -30,6 +30,9 @@ export const Contact: React.FC = () => {
                     <a target='_blank' rel='noreferrer' href='https://www.instagram.com/__sumitsj__/' className="contact-link"><InstaIcon />Instagram</a>
                     <a target='_blank' rel='noreferrer' href='https://github.com/sumitsj' className="contact-link"><GitIcon />Github</a>
                 </div>
+                <div className='download-button'>
+                    <button>Download Resume</button>
+                </div>
             </div>
         </div >
     )
