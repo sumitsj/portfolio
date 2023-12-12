@@ -8,7 +8,7 @@ export const About: React.FC = () => {
         <div className='about-page'>
             <div className='section-title'>My Skills</div>
             <Skills />
-            <hr className='separator separator--dots' />
+            <hr className='separator' />
             <div className='section-title'>Work Experience & Education</div>
             <Timeline />
         </div>
