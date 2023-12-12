@@ -12,8 +12,8 @@ import './Contact.scss';
 export const Contact: React.FC = () => {
     return (
         <div className='contact-page'>
-            <div>
-                <div className='contact-hero-section'>{'Let\'s Connect...'}</div>
+            <div className='contact-hero-section'>{'Let\'s Connect...'}</div>
+            <div className='contact-card-container'>
                 <div className="contact-info">
                     <div className="contact-label">Email</div>
                     <a target='_blank' rel='noreferrer' href='mailto:summit.jadhav@gmail.com' className="contact-link"><EmailIcon />summit.jadhav@gmail.com</a>
@@ -30,9 +30,9 @@ export const Contact: React.FC = () => {
                     <a target='_blank' rel='noreferrer' href='https://www.instagram.com/__sumitsj__/' className="contact-link"><InstaIcon />Instagram</a>
                     <a target='_blank' rel='noreferrer' href='https://github.com/sumitsj' className="contact-link"><GitIcon />Github</a>
                 </div>
-                <div className='download-button'>
-                    <button>Download Resume</button>
-                </div>
+            </div>
+            <div className='download-button'>
+                <button>Download Resume</button>
             </div>
         </div >
     )
