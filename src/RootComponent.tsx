@@ -23,11 +23,13 @@ const RootComponent: React.FC = () => {
                                 outerAlpha={0}
                                 // hasBlendMode={true}
                                 innerStyle={{
-                                    backgroundColor: '#cd7650'
+                                    backgroundColor: '#cd7650',
+                                    zIndex: 1000
                                 }}
                                 outerStyle={{
                                     border: '2px solid #cd7650',
-                                    backgroundColor: 'rgba(205, 118, 80, 0.2)'
+                                    backgroundColor: 'rgba(205, 118, 80, 0.2)',
+                                    zIndex: 1000
                                 }}
                             />
                             <Nav />

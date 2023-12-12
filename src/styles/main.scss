@@ -119,7 +119,7 @@ h2 {
   align-items: center;
   justify-content: center;
   transition: all .4s;
-  z-index: 1000;
+  z-index: 100;
 
   @include breakpoint('<phone') {
     top: calc(100vh - 8rem);
@@ -150,7 +150,7 @@ h2 {
     }
 
     &:hover:not(.active) {
-      color: $highligher-color;
+      color: $highligher-color-link;
     }
   }
 }

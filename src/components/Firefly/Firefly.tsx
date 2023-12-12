@@ -6,13 +6,13 @@ export const Firefly: React.FC = () => {
 
     const getHtml = (i: number) => <div key={i} className="firefly"></div>;
 
-    return <>
+    return <div>
         {
-            Array.apply(0, Array(count)).map(function (x, i) {
+            Array.apply(1, Array(count)).map(function (x, i) {
                 return getHtml(i);
             })
         }
-    </>
+    </div>
 }
 
 
