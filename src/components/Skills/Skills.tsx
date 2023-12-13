@@ -44,11 +44,11 @@ export const Skills: React.FC = () => {
 
     return (<div className='skills'>
         {skillDetails.map((skill, index) => {
-            return (<div className='skill' key={index}>
+            return (<button className='skill' key={index}>
                 <span className='content'>
                     {React.createElement(components[skill], {})}
                 </span>
-            </div>);
+            </button>);
         })}
     </div>)
 }
