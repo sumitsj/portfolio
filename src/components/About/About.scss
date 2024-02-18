@@ -1,5 +1,11 @@
+@import '../../styles/mixins';
+
 .about-page {
     display: flex;
     flex-direction: column;
-    padding: 10vh 10vw;
+    padding: 5vh 10vw 20vh;
+
+    @include breakpoint('<phone') {
+        padding: 0 10vw 20vh;
+    }
 }
