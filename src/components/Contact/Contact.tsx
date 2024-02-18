@@ -65,7 +65,13 @@ export const Contact: React.FC = () => {
                 {props.map((details, index) => <ContactCard key={index} title={details.title} details={details.details} />)}
             </div>
             <div className='download-button'>
-                <button>Download Resume</button>
+                <a
+                    href="Sumit Jadhav - Resume - Lead Developer.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <button>Download Resume</button>
+                </a>
             </div>
         </div >
     )
